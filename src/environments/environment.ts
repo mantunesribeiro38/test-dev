@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  API: ' http://tecprime.com.br/api/'
+  API_URL: ' http://tecprime.com.br/api'
 };
 
 /*

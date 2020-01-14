@@ -1,18 +1,23 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Category } from '../models/category';
+import { tap } from 'rxjs/operators';
+
 @Injectable({
   providedIn: 'root',
 })
 export class CategoriesService {
 
-  private API_URL = `${this.API_URL}/${id}` ;
+  private API_URL = 'http://tecprime.com.br/api/categories' ;
 
   constructor(
-    protected private: HttpClient
+    private http: HttpClient
   ) { }
 
   list() {
-    return this.http.get<T>(API_URL).pipe(take(1));
+    return this.http.get<Category>(this.API_URL).pipe(
+      tap(console.log)
+    );
   }
 
 }
