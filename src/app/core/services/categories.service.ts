@@ -1,8 +1,9 @@
+import { Product } from './../models/product';
 import { environment } from './../../../environments/environment';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Category } from '../models/category';
-import { tap } from 'rxjs/operators';
+import { tap, delay } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root',
@@ -22,7 +23,7 @@ export class CategoriesService {
   }
 
   getProductsByCategory(id) {
-      return this.http.get(`${this.API_URL}products/${id}`).pipe(
+      return this.http.post(`${this.API_URL}products/`, { category: id}).pipe(
         tap(console.log)
       );
   }
