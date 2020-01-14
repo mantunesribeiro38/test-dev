@@ -1,6 +1,8 @@
+import { Category } from './../../core/models/category';
 import { CategoriesService } from './../../core/services/categories.service';
 import { Component, OnInit } from '@angular/core';
-import { Category } from 'src/app/core/models/category';
+import { Observable } from 'rxjs';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-categories',
@@ -9,20 +11,20 @@ import { Category } from 'src/app/core/models/category';
 })
 export class CategoriesComponent implements OnInit {
 
-  categories: Category[] ;
+  categories$: Observable<Category[]>;
 
   constructor(
-    private categoriesService: CategoriesService 
+    private categoriesService: CategoriesService,
+    private router: Router,
+    private route: ActivatedRoute 
   ) { }
 
   ngOnInit() {
-    this.categoriesService.list().subscribe(
-      data => this.categories = data
-    );
+      this.categories$ = this.categoriesService.list();
   }
 
-  showDetailsCategory (idCategory) {
-    console.log(idCategory);
+  listProductsByCategory (idCategory) {
+    this.router.navigate(['category', idCategory]);
   }
 
 }

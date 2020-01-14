@@ -1,10 +1,17 @@
 <h4 class="mb-4 title-categories" >Categorias</h4>
-<div class="row">
-    <div class="col-md-4" *ngFor="let category of categories" (click)="showDetailsCategory(category.id)">
+<div class="row" *ngIf="categories$ | async as categories ; else loading">
+    <div class="col-md-4"  *ngFor="let category of categories" (click)="listProductsByCategory(category.id)">
       <div class="card mb-4 shadow-sm">
         <div class="card-body">
         <p class="card-text">{{ category.nome}}</p>
         </div>
       </div>
     </div>
-  </div>
+</div>
+<ng-template #loading>
+  <div class="row">
+      <div class="col-md-12">
+        <span> Carregando Categorias...</span>   
+      </div>
+ </div>
+</ng-template>
