@@ -1,9 +1,10 @@
+import { ProductsService } from './../../core/services/products.service';
+import { OrderComponent } from './../order/order.component';
 import { Order } from './../../core/models/order';
 import { Product } from './../../core/models/product';
-import { CategoriesService } from './../../core/services/categories.service';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { LocalStorageService } from 'angular-web-store'
+import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
 
 @Component({
   selector: 'app-products',
@@ -13,25 +14,30 @@ import { LocalStorageService } from 'angular-web-store'
 export class ProductsComponent implements OnInit {
 
   public orders: Order[];
-
   products: Product[];
+  modalRef: BsModalRef | null;
   constructor(
     private route: ActivatedRoute,
-    private categoriesService: CategoriesService,
-    private local: LocalStorageService
+    private productsService: ProductsService,
+    private modalService: BsModalService,
   ) { }
 
   ngOnInit() {
     let id = this.route.snapshot.paramMap.get('id');
-    this.categoriesService.getProductsByCategory(id).subscribe(
+    this.productsService.getProductsByCategory(id).subscribe(
       data => this.products = data
     );
   }
 
+  openModalOrder(idProduct, nameProduct, price) {
 
-  addItemInCart(idProduct) {
-    console.log(idProduct);
-    //this.local.set(this.KEY, { a: 1, now: +new Date }, '4s')
+    this.modalRef = this.modalService.show(OrderComponent,
+      {
+        initialState: {
+          title: nameProduct,
+          data: {idProduct, price}
+        }
+      }
+    );
   }
-
 }
