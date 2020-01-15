@@ -6,10 +6,12 @@ import { HttpClientModule } from '@angular/common/http';
 import { AngularWebStoreModule } from 'angular-web-store';
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import { AlertModule } from 'ngx-alerts';
-import { FormsModule }   from '@angular/forms';
+import { ModalModule } from 'ngx-bootstrap';
+import { ListOrderComponent } from './home/list-order/list-order.component';
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ListOrderComponent
   ],
   imports: [
     BrowserModule,
@@ -18,9 +20,10 @@ import { FormsModule }   from '@angular/forms';
     AngularWebStoreModule.forRoot(),
     AlertModule.forRoot({maxMessages: 5, timeout: 5000, position: 'right'}),
     BrowserAnimationsModule,
-    FormsModule
+    ModalModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent],
+  entryComponents: [ListOrderComponent ]
 })
 export class AppModule { }

@@ -3,9 +3,8 @@ import { OrderComponent } from './../order/order.component';
 import { Order } from './../../core/models/order';
 import { Product } from './../../core/models/product';
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
 import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
-
+import { Router, ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'app-products',
   templateUrl: './products.component.html',
@@ -17,9 +16,10 @@ export class ProductsComponent implements OnInit {
   products: Product[];
   modalRef: BsModalRef | null;
   constructor(
-    private route: ActivatedRoute,
     private productsService: ProductsService,
     private modalService: BsModalService,
+    private router: Router,
+    private route: ActivatedRoute 
   ) { }
 
   ngOnInit() {
@@ -35,9 +35,13 @@ export class ProductsComponent implements OnInit {
       {
         initialState: {
           title: nameProduct,
-          data: {idProduct, price}
+          data: {idProduct, price, nameProduct}
         }
       }
     );
+  }
+
+  backToCategories () {
+    this.router.navigate(['/']);
   }
 }

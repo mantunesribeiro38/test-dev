@@ -24,41 +24,35 @@ export class OrderComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    
-    console.log(this.data);
-    
-    this.addItemInCart(this.data.idProduct, this.data.price);
+   
+    this.addItemInCart(this.data.idProduct, this.data.price, this.data.nameProduct);
     
     if (this.resultSearchOrder.length > 0) {
       this.alertService.warning('Pedido já foi adicionado!');
 
       this.productItem = this.resultSearchOrder[0];
     }else {
-      this.productItem = {id_produto: this.data.idProduct, quantidade: 1, price: this.data.price };
+      this.productItem = {id_produto: this.data.idProduct, quantidade: 1, price: this.data.price, nameProduct: this.data.nameProduct };
     }
-    console.log('Order');
-    console.log(this.productItem);
+
   }
 
-  addItemInCart(idProduct, price) {
+  addItemInCart(idProduct, price, nameProduct) {
 
     this.oldItems = this.local.get(this.KEY);
  
     if( this.oldItems == null) {
-      this.local.set( this.KEY, [{id_produto: idProduct, quantidade: 1, price: price }] );
+      this.local.set( this.KEY, [{id_produto: idProduct, quantidade: 1, price: price, nameProduct: nameProduct }] );
     }
 
     if(this.oldItems !== null) {
       
       this.resultSearchOrder = this.oldItems.filter(function(order) {
-        console.log(order.id_produto);
         return order.id_produto === idProduct;
       });
-      
-      console.log('Resultado', this.resultSearchOrder);
-      
+        
       if (this.resultSearchOrder.length === 0) {
-        this.oldItems.push({id_produto: idProduct, quantidade: 1, price: price });
+        this.oldItems.push({id_produto: idProduct, quantidade: 1, price: price, nameProduct: nameProduct });
         this.local.set( this.KEY,  this.oldItems );
       }
   
@@ -76,10 +70,8 @@ export class OrderComponent implements OnInit {
       }
     });
    
-    console.log('INDEX',indexOfProduct);
     this.productItem.quantidade--;
     this.oldItems[indexOfProduct].quantidade =  this.productItem.quantidade;
-    console.log( this.oldItems);
     this.local.set( this.KEY,  this.oldItems );
   }
 
@@ -94,10 +86,8 @@ export class OrderComponent implements OnInit {
       }
     });
    
-    console.log('INDEX',indexOfProduct);
     this.productItem.quantidade++;
     this.oldItems[indexOfProduct].quantidade =  this.productItem.quantidade;
-    console.log( this.oldItems);
     this.local.set( this.KEY,  this.oldItems );
   }
 }

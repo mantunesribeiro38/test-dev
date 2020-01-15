@@ -6,6 +6,7 @@ import { CategoriesComponent } from './categories/categories.component';
 import { ProductsComponent } from './products/products.component';
 import { ModalModule } from 'ngx-bootstrap/modal';
 
+
 @NgModule({
   declarations: [CategoriesComponent, ProductsComponent, OrderComponent],
   imports: [
@@ -13,6 +14,6 @@ import { ModalModule } from 'ngx-bootstrap/modal';
     HomeRoutingModule,
     ModalModule.forRoot()
   ],
-  entryComponents: [ OrderComponent ]
+  entryComponents: [ OrderComponent]
 })
 export class HomeModule { }
