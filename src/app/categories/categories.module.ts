@@ -1,8 +1,8 @@
 import { OrderComponent } from './order/order.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { HomeRoutingModule } from './home-routing.module';
-import { CategoriesComponent } from './categories/categories.component';
+import { CategoriesRoutingModule } from './categories-routing.module';
+import { CategoriesComponent } from './categories.component';
 import { ProductsComponent } from './products/products.component';
 import { ModalModule } from 'ngx-bootstrap/modal';
 
@@ -11,9 +11,9 @@ import { ModalModule } from 'ngx-bootstrap/modal';
   declarations: [CategoriesComponent, ProductsComponent, OrderComponent],
   imports: [
     CommonModule,
-    HomeRoutingModule,
+    CategoriesRoutingModule,
     ModalModule.forRoot()
   ],
   entryComponents: [ OrderComponent]
 })
-export class HomeModule { }
+export class CategoriesModule { }

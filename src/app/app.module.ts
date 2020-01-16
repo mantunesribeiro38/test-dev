@@ -7,7 +7,7 @@ import { AngularWebStoreModule } from 'angular-web-store';
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import { AlertModule } from 'ngx-alerts';
 import { ModalModule } from 'ngx-bootstrap';
-import { ListOrderComponent } from './home/list-order/list-order.component';
+import { ListOrderComponent } from './categories/list-orders/list-orders.component';
 @NgModule({
   declarations: [
     AppComponent,

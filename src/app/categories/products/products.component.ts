@@ -1,7 +1,7 @@
-import { ProductsService } from './../../core/services/products.service';
+import { ProductsService } from './../../services/products.service';
 import { OrderComponent } from './../order/order.component';
-import { Order } from './../../core/models/order';
-import { Product } from './../../core/models/product';
+import { Order } from './../../models/order';
+import { Product } from './../../models/product';
 import { Component, OnInit } from '@angular/core';
 import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
 import { Router, ActivatedRoute } from '@angular/router';

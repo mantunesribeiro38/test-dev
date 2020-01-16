@@ -1,9 +1,7 @@
-import { Product } from './../../core/models/product';
+import { Product } from './../../models/product';
 import { Component, OnInit } from '@angular/core';
 import { BsModalRef } from 'ngx-bootstrap/modal';
-import { ProductsService } from 'src/app/core/services/products.service';
 import { LocalStorageService } from 'angular-web-store';
-import { AlertService } from 'ngx-alerts';
 
 @Component({
   templateUrl: './order.component.html',
@@ -19,8 +17,7 @@ export class OrderComponent implements OnInit {
   productItem
   constructor(  
     public modalRef: BsModalRef,
-    private local: LocalStorageService,
-    private alertService: AlertService,
+    private local: LocalStorageService
   ) { }
 
   ngOnInit() {

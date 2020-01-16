@@ -1,4 +1,4 @@
-import { ListOrderComponent } from './home/list-order/list-order.component';
+import { ListOrderComponent } from './categories/list-orders/list-orders.component';
 import { Component, OnInit } from '@angular/core';
 import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
 @Component({
@@ -6,15 +6,10 @@ import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnInit {
+export class AppComponent  {
   title = 'test-tecprime';
   modalRef: BsModalRef | null;
   constructor (  private modalService: BsModalService,) {
-
-  }
-
-  ngOnInit() {
-
   }
 
   openModalListOrder(idProduct, nameProduct, price) {

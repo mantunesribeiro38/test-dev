@@ -3,8 +3,8 @@ import { BsModalRef } from 'ngx-bootstrap/modal';
 import { LocalStorageService } from 'angular-web-store';
 import { AlertService } from 'ngx-alerts';
 @Component({
-  templateUrl: './list-order.component.html',
-  styleUrls: ['./list-order.component.scss']
+  templateUrl: './list-orders.component.html',
+  styleUrls: ['./list-orders.component.scss']
 })
 export class ListOrderComponent implements OnInit {
   title;
