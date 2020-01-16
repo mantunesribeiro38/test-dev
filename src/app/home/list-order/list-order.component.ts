@@ -36,7 +36,7 @@ export class ListOrderComponent implements OnInit {
   finishOrder () {
     this.modalRef.hide();
     this.local.clear();
-    this.alertService.success('Pedido finalizado com sucesso!');
+    this.alertService.success('Pedido enviado com sucesso!');
   }
 
 }

@@ -12,7 +12,7 @@
     <div class="col-md-4"  *ngFor="let product of products" (click)="openModalOrder(product.id, product.nome, product.preco)">
       <div class="card mb-4 shadow-sm">
         <div class="card-body">
-        <p class="card-text name">{{ product.nome}} {{ product.id}}</p>
+        <p class="card-text name">{{ product.nome}}</p>
         <p class="card-text description mb-4">{{ product.descricao}}</p>
         <p class="card-text preco">{{ product.preco | currency:'BRL'}}</p>
         </div>

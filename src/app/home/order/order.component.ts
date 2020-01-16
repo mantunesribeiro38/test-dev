@@ -28,8 +28,7 @@ export class OrderComponent implements OnInit {
     this.addItemInCart(this.data.idProduct, this.data.price, this.data.nameProduct);
     
     if (this.resultSearchOrder.length > 0) {
-      this.alertService.warning('Pedido já foi adicionado!');
-
+    
       this.productItem = this.resultSearchOrder[0];
     }else {
       this.productItem = {id_produto: this.data.idProduct, quantidade: 1, price: this.data.price, nameProduct: this.data.nameProduct };
