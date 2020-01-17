@@ -5,11 +5,15 @@
 </div>
 <div class="modal-body" *ngIf="this.listOrder && this.listOrder.length > 0">
 <h5 class="mb-3">{{ title}}</h5>
-  <div class="row" *ngFor="let order of this.listOrder">
-    <div class="col mb-2" style="border-bottom: 1px solid #ccc;">
+  <div class="row mb-1" *ngFor="let order of this.listOrder"style="border-bottom: 1px solid #ccc;">
+    <div class="col-6 mb-2" >
        Produto:  <span class="span-product">{{order.nameProduct}}</span><br>
        Quantidade: <span class="span-product">{{order.quantity}}</span><br>
        Preço Unitário : <span class="span-product mb-2 color-price">{{order.price | currency:'BRL' }}</span><br>
+       
+    </div>
+    <div class="col-6 text-right">
+        <button (click)="editOrder(order.id_product, order.nameProduct, order.price)" type="button" class="btn btn-light mt-3">Editar</button> 
     </div>
     <hr>
 </div>

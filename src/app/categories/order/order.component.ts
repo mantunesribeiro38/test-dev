@@ -1,4 +1,3 @@
-import * as Constants from '../../constants';
 import { Component, OnInit } from '@angular/core';
 import { BsModalRef } from 'ngx-bootstrap/modal';
 import { LocalStorageService } from 'angular-web-store';

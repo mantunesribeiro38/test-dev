@@ -8,12 +8,11 @@ import { ModalModule } from 'ngx-bootstrap/modal';
 
 
 @NgModule({
-  declarations: [CategoriesComponent, ProductsComponent, OrderComponent],
+  declarations: [CategoriesComponent, ProductsComponent],
   imports: [
     CommonModule,
     CategoriesRoutingModule,
     ModalModule.forRoot()
   ],
-  entryComponents: [ OrderComponent]
 })
 export class CategoriesModule { }

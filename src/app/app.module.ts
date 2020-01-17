@@ -1,3 +1,4 @@
+import { OrderComponent } from './categories/order/order.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
@@ -11,7 +12,8 @@ import { ListOrderComponent } from './categories/list-orders/list-orders.compone
 @NgModule({
   declarations: [
     AppComponent,
-    ListOrderComponent
+    ListOrderComponent,
+    OrderComponent
   ],
   imports: [
     BrowserModule,
@@ -24,6 +26,6 @@ import { ListOrderComponent } from './categories/list-orders/list-orders.compone
   ],
   providers: [],
   bootstrap: [AppComponent],
-  entryComponents: [ListOrderComponent ]
+  entryComponents: [ListOrderComponent, OrderComponent ]
 })
 export class AppModule { }
