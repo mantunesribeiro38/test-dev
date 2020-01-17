@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { BsModalRef } from 'ngx-bootstrap/modal';
 import { LocalStorageService } from 'angular-web-store';
 import findIndexArray from "../../utils/findIndexArray";
+
 @Component({
   templateUrl: './order.component.html',
   styleUrls: ['./order.component.scss']
@@ -10,7 +11,7 @@ import findIndexArray from "../../utils/findIndexArray";
 export class OrderComponent implements OnInit {
   
   data: any;
-  oldItems = null;
+  orderProducts = null;
   resultSearchOrder = [];
   title
   productItem
@@ -37,21 +38,21 @@ export class OrderComponent implements OnInit {
 
   addItemInCart(idProduct, price, nameProduct) {
 
-    this.oldItems = this.local.get(Constants.KEY_ORDERS);
+    this.orderProducts = this.local.get(Constants.KEY_ORDERS);
  
-    if( this.oldItems == null) {
+    if( this.orderProducts == null) {
       this.local.set( Constants.KEY_ORDERS, [{id_product: idProduct, quantity: 1, price: price, nameProduct: nameProduct }] );
     }
 
-    if(this.oldItems !== null) {
+    if(this.orderProducts !== null) {
       
-      this.resultSearchOrder = this.oldItems.filter(function(order) {
+      this.resultSearchOrder = this.orderProducts.filter(function(order) {
         return order.id_product === idProduct;
       });
         
       if (this.resultSearchOrder.length === 0) {
-        this.oldItems.push({id_product: idProduct, quantity: 1, price: price, nameProduct: nameProduct });
-        this.local.set( Constants.KEY_ORDERS,  this.oldItems );
+        this.orderProducts.push({id_product: idProduct, quantity: 1, price: price, nameProduct: nameProduct });
+        this.local.set( Constants.KEY_ORDERS,  this.orderProducts );
       }
   
     }
@@ -59,13 +60,13 @@ export class OrderComponent implements OnInit {
 
   removeItem () {
     
-    this.oldItems = this.local.get(Constants.KEY_ORDERS);
+    this.orderProducts = this.local.get(Constants.KEY_ORDERS);
 
-    let indexOfProduct = findIndexArray( this.oldItems, this.productItem.id_product);
+    let indexOfProduct = findIndexArray( this.orderProducts, this.productItem.id_product);
     
     if(this.productItem.quantity === 1) {
 
-      this.oldItems.splice(indexOfProduct, 1);
+      this.orderProducts.splice(indexOfProduct, 1);
       
       this.modalRef.hide();
     }
@@ -73,22 +74,22 @@ export class OrderComponent implements OnInit {
     if(this.productItem.quantity > 1) {
       this.productItem.quantity--;
     
-      this.oldItems[indexOfProduct].quantity =  this.productItem.quantity;
+      this.orderProducts[indexOfProduct].quantity =  this.productItem.quantity;
     }
 
-    this.local.set( Constants.KEY_ORDERS,  this.oldItems );
+    this.local.set( Constants.KEY_ORDERS,  this.orderProducts );
   }
 
   addMoreItem () {
 
-    this.oldItems = this.local.get(Constants.KEY_ORDERS);
+    this.orderProducts = this.local.get(Constants.KEY_ORDERS);
     
-    let indexOfProduct = findIndexArray( this.oldItems, this.productItem.id_product);
+    let indexOfProduct = findIndexArray( this.orderProducts, this.productItem.id_product);
     
     this.productItem.quantity++;
     
-    this.oldItems[indexOfProduct].quantity =  this.productItem.quantity;
+    this.orderProducts[indexOfProduct].quantity =  this.productItem.quantity;
     
-    this.local.set( Constants.KEY_ORDERS,  this.oldItems );
+    this.local.set( Constants.KEY_ORDERS,  this.orderProducts );
   }
 }

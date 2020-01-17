@@ -15,7 +15,7 @@ export class ProductsService {
   ) { }
 
   getProductsByCategory(id) {
-      return this.http.post(`${this.API_URL}products/`, { category: id}).pipe(
+      return this.http.get(`${this.API_URL}products?categoria_id=${id}`).pipe(
         tap(console.log)
       );
   }

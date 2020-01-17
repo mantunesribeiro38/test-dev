@@ -1,9 +1,9 @@
-export default function (oldItems: any, keyIndex: number) {
+export default function (listProducts: any, idProduct: number) {
     let indexOfProduct = null;
         
-    oldItems.forEach(( item , index ) => {
+    listProducts.forEach(( product , index ) => {
      
-      if( item.id_product === keyIndex) {
+      if( product.id_product === idProduct) {
         indexOfProduct = index;
       }
     });

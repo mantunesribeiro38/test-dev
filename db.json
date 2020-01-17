@@ -1,0 +1,162 @@
+{
+  "categories": [
+    {
+      "id": 1,
+      "nome": "Hambúrgueres"
+    },
+    {
+      "id": 2,
+      "nome": "Refrigerantes"
+    },
+    {
+      "id": 3,
+      "nome": "Sucos"
+    },
+    {
+      "id": 4,
+      "nome": "Porções"
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "nome": "Hambúrguer",
+      "descricao": "Pão, hambúrguer 90g, salada e batata.",
+      "preco": 8.5,
+      "categoria_id": 1
+    },
+    {
+      "id": 2,
+      "nome": "X-Búrguer",
+      "descricao": "Pão, hambúrguer 90g, 1 fatia de queijo, salada e batata.",
+      "preco": 10.5,
+      "categoria_id": 1
+    },
+    {
+      "id": 3,
+      "nome": "X-Bacon",
+      "descricao": "Pão, hambúrguer 90g, 1 fatia de queijo, 2 fatia de bacon, salada e batata.",
+      "preco": 12.5,
+      "categoria_id": 1
+    },
+    {
+      "id": 4,
+      "nome": "X-Tudo",
+      "descricao": "Pão, 2 hambúrgueres 90g, 2 fatias de queijo, 4 fatias de bacon, salada e batata.",
+      "preco": 14.5,
+      "categoria_id": 1
+    },
+    {
+      "id": 5,
+      "nome": "Coca cola 350ml",
+      "descricao": "",
+      "preco": 5.5,
+      "categoria_id": 2
+    },
+    {
+      "id": 6,
+      "nome": "Coca cola 600ml",
+      "descricao": "",
+      "preco": 7.5,
+      "categoria_id": 2
+    },
+    {
+      "id": 7,
+      "nome": "Fanta Laranja 350ml",
+      "descricao": "",
+      "preco": 5.5,
+      "categoria_id": 2
+    },
+    {
+      "id": 8,
+      "nome": "Fanta Laranja 600ml",
+      "descricao": "",
+      "preco": 7.5,
+      "categoria_id": 2
+    },
+    {
+      "id": 9,
+      "nome": "Guaraná Antartica 350ml",
+      "descricao": "",
+      "preco": 5.5,
+      "categoria_id": 2
+    },
+    {
+      "id": 10,
+      "nome": "Guaraná Antartica 600ml",
+      " descricao": "",
+      "preco": 7.5,
+      "categoria_id": 2
+    },
+    {
+      "id": 11,
+      "nome": "Suco Del Valle Pêssego 350ml",
+      "descricao": "",
+      "preco": 5.5,
+      "categoria_id": 3
+    },
+    {
+      "id": 12,
+      "nome": "Suco Del Valle Pêssego 1L",
+      "descricao": "",
+      "preco": 7.5,
+      "categoria_id": 3
+    },
+    {
+      "id": 13,
+      "nome": "Suco de Laranja (fruta) 500ml",
+      "descricao": "",
+      "preco": 8,
+      "categoria_id": 3
+    },
+    {
+      "id": 14,
+      "nome": "Suco de Morango (polpa) 500ml",
+      "descricao": "",
+      "preco": 8,
+      "categoria_id": 3
+    },
+    {
+      "id": 15,
+      "nome": "Suco de Limão (fruta) 500ml",
+      "descricao": "",
+      "preco": 6,
+      "categoria_id": 3
+    },
+    {
+      "id": 16,
+      "nome": "Batata Frita 500g",
+      "descricao": "",
+      "preco": 10,
+      "categoria_id": 4
+    },
+    {
+      "id": 17,
+      "nome": "Batata Frita 1kg",
+      "descricao": "",
+      "preco": 18,
+      "categoria_id": 4
+    },
+    {
+      "id": 18,
+      "nome": "Frango à Passarinho 500g",
+      "descricao": "",
+      "preco": 14.5,
+      "categoria_id": 4
+    },
+    {
+      "id": 19,
+      "nome": "Croquete de Bacalhau (8 unidades)",
+      "descricao": "",
+      "preco": 20,
+      "categoria_id": 4
+    },
+    {
+      "id": 20,
+      "nome": "Pastelzinhos (8 unidades)",
+      "descricao": "",
+      "preco": 16,
+      "categoria_id": 4
+    }
+  ]
+}

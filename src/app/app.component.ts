@@ -17,8 +17,7 @@ export class AppComponent  {
     this.modalRef = this.modalService.show(ListOrderComponent,
       {
         initialState: {
-          title: 'Items do Pedido',
-    
+          title: 'Items do Pedido'
         }
       }
     );
