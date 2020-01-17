@@ -5,7 +5,7 @@
 </div>
 <div class="modal-body" *ngIf="this.listOrder && this.listOrder.length > 0">
 <h5 class="mb-3">{{ title}}</h5>
-  <div class="row mb-1" *ngFor="let order of this.listOrder"style="border-bottom: 1px solid #ccc;">
+  <div class="row mb-1 orders" *ngFor="let order of this.listOrder">
     <div class="col-6 mb-2" >
        Produto:  <span class="span-product">{{order.nameProduct}}</span><br>
        Quantidade: <span class="span-product">{{order.quantity}}</span><br>

@@ -1,10 +1,9 @@
 import { ProductsService } from './../../services/products.service';
 import { OrderComponent } from './../order/order.component';
 import { Product } from './../../models/product';
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
 import { Router, ActivatedRoute } from '@angular/router';
-import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-products',
@@ -12,9 +11,7 @@ import { Subscription } from 'rxjs';
   styleUrls: ['./products.component.scss']
 })
 export class ProductsComponent implements OnInit  {
-  
-  private subscription: Subscription;
-  
+    
   products: Product[];
   
   modalRef: BsModalRef | null;
