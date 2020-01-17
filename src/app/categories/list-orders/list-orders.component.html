@@ -3,9 +3,9 @@
       <span aria-hidden="true">&times;</span>
     </button>
 </div>
-<div class="modal-body" *ngIf="this.oldItems && this.oldItems.length > 0">
+<div class="modal-body" *ngIf="this.listOrder && this.listOrder.length > 0">
 <h5 class="mb-3">{{ title}}</h5>
-  <div class="row" *ngFor="let order of this.oldItems">
+  <div class="row" *ngFor="let order of this.listOrder">
     <div class="col mb-2" style="border-bottom: 1px solid #ccc;">
        Produto:  <span class="span-product">{{order.nameProduct}}</span><br>
        Quantidade: <span class="span-product">{{order.quantity}}</span><br>
@@ -23,6 +23,6 @@
 </div>
 </div>
 
-<div class="modal-body" *ngIf="!this.oldItems || this.oldItems.length === 0">
+<div class="modal-body" *ngIf="!this.listOrder || this.listOrder.length === 0">
  Nenhum pedido foi adicionado!   
  </div>

@@ -3,7 +3,7 @@ import { environment } from '../../environments/environment';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Category } from '../models/category';
-import { tap, delay, take } from 'rxjs/operators';
+import { tap, take } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root',
