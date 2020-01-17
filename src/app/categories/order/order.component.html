@@ -4,17 +4,17 @@
     </button>
 </div>
 <div class="modal-body">
-<h5 class="mb-3">{{ title}}</h5>
+<h5 class="mb-3">{{ title }}</h5>
   <div class="row">
     <div class="col">
-       Quantidade: <span class="span-product">{{this.productItem.quantidade}}</span><br>
-       Preço: <span class="span-product">{{this.productItem.price}}</span><br>
-       Total: <span class="span-product color-price">{{this.productItem.price * this.productItem.quantidade | currency:'BRL'}}</span>
+       Quantidade: <span class="span-product">{{ this.productItem.quantity }}</span><br>
+       Preço Unitário: <span class="span-product">{{ this.productItem.price | currency:'BRL'}}</span><br>
+       Total: <span class="span-product color-price">{{this.productItem.price * this.productItem.quantity | currency:'BRL'}}</span>
     </div>
 </div>
 <div class="row">
   <div class="col text-center mt-3">
-    <button (click)="removeItem()" [hidden]="this.productItem.quantidade === 1" type="button" class="btn btn-danger mr-3">Remover</button>
+    <button (click)="removeItem()"  type="button" class="btn btn-danger mr-3">Remover</button>
     <button (click)="addMoreItem()" type="button" class="btn btn-success">Adicionar</button>
   </div>
 </div>

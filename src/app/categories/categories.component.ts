@@ -2,7 +2,7 @@ import { Category } from '../models/category';
 import { CategoriesService } from '../services/categories.service';
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Router, ActivatedRoute } from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-categories',
@@ -15,8 +15,7 @@ export class CategoriesComponent implements OnInit {
 
   constructor(
     private categoriesService: CategoriesService,
-    private router: Router,
-    private route: ActivatedRoute 
+    private router: Router
   ) { }
 
   ngOnInit() {

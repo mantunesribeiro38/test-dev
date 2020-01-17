@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { BsModalRef } from 'ngx-bootstrap/modal';
 import { LocalStorageService } from 'angular-web-store';
 import { AlertService } from 'ngx-alerts';
+import * as Constants from '../../constants';
+
 @Component({
   templateUrl: './list-orders.component.html',
   styleUrls: ['./list-orders.component.scss']
@@ -9,7 +11,6 @@ import { AlertService } from 'ngx-alerts';
 export class ListOrderComponent implements OnInit {
   title;
   oldItems;
-  KEY = 'orders';
   priceFinal: number;
   constructor(
     private local: LocalStorageService,
@@ -20,12 +21,12 @@ export class ListOrderComponent implements OnInit {
 
   ngOnInit() {
     
-    this.oldItems = this.local.get(this.KEY);
+    this.oldItems = this.local.get(Constants.KEY_ORDERS);
     
     if(this.oldItems !== null) {
       let totalOrder = 0;
-      this.oldItems.forEach(function(item,index) {
-          let totalPrice = item.price * item.quantidade
+      this.oldItems.forEach( (item)=> {
+          let totalPrice = item.price * item.quantity
           totalOrder = totalPrice + totalOrder;
       });
   

@@ -3,13 +3,13 @@
       <span aria-hidden="true">&times;</span>
     </button>
 </div>
-<div class="modal-body" *ngIf="this.oldItems">
+<div class="modal-body" *ngIf="this.oldItems && this.oldItems.length > 0">
 <h5 class="mb-3">{{ title}}</h5>
   <div class="row" *ngFor="let order of this.oldItems">
     <div class="col mb-2" style="border-bottom: 1px solid #ccc;">
        Produto:  <span class="span-product">{{order.nameProduct}}</span><br>
-       Quantidade: <span class="span-product">{{order.quantidade}}</span><br>
-       Unidade : <span class="span-product mb-2 color-price">{{order.price}}</span><br>
+       Quantidade: <span class="span-product">{{order.quantity}}</span><br>
+       Preço Unitário : <span class="span-product mb-2 color-price">{{order.price | currency:'BRL' }}</span><br>
     </div>
     <hr>
 </div>
@@ -23,6 +23,6 @@
 </div>
 </div>
 
-<div class="modal-body" *ngIf="!this.oldItems">
+<div class="modal-body" *ngIf="!this.oldItems || this.oldItems.length === 0">
  Nenhum pedido foi adicionado!   
  </div>

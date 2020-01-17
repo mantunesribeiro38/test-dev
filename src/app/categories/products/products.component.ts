@@ -1,20 +1,24 @@
 import { ProductsService } from './../../services/products.service';
 import { OrderComponent } from './../order/order.component';
-import { Order } from './../../models/order';
 import { Product } from './../../models/product';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
 import { Router, ActivatedRoute } from '@angular/router';
+import { Subscription } from 'rxjs';
+
 @Component({
   selector: 'app-products',
   templateUrl: './products.component.html',
   styleUrls: ['./products.component.scss']
 })
-export class ProductsComponent implements OnInit {
-
-  public orders: Order[];
+export class ProductsComponent implements OnInit  {
+  
+  private subscription: Subscription;
+  
   products: Product[];
+  
   modalRef: BsModalRef | null;
+  
   constructor(
     private productsService: ProductsService,
     private modalService: BsModalService,
@@ -30,6 +34,7 @@ export class ProductsComponent implements OnInit {
   }
 
   openModalOrder(idProduct, nameProduct, price) {
+    
 
     this.modalRef = this.modalService.show(OrderComponent,
       {
