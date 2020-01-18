@@ -1,60 +1,36 @@
-
-  
-
 # :dart: Teste Técnico para a vaga de Desenvolvedor
-
-  
 
 ![Image description](https://github.com/mantunesribeiro38/test-dev/blob/master/my-food.png)
 
-  
-
 ## Desafio
 
-  
-
 O objetivo deste desafio é criar uma aplicação que apresente o cardápio de uma lanchonete e permita ao cliente fazer um pedido.
-
-  
-
-Você terá 2(dois) dias a contar de hoje para concluir este teste.
-
-  
-
+    
 Ao entrar, o usuário deverá visualizar as categorias de produtos e, ao clicar em uma categoria, deverá visualizar os produtos dessa categoria.
 
-  
-
-## Pré-Requitos
-
-  
+### Pré-Requitos  
 
 <ul>
-
-<li>ao acessar a aplicação deve mostrar a lista de categorias</li>
-
-<li>ao acessar a categoria deve mostrar a lista de produtos</li>
-
-<li>o valor do produto deve estar formatado com duas casas após a vírgula</li>
-<li>deve ser possível adicionar produtos à um pedido</li>
-<li>
-esse pedido pode ser um modal ou tela mostrando o que o usuário escolheu, a quantidade e o valor total daquele produto
-</li>
-<li>o pedido deve mostrar também o valor total do pedido</li>
-<li>deve ser possível alterar as quantidades no pedido</li>
-<li>deve ser possível remover um item do pedido</li>
-<li>deve ser possível navegar de volta para a tela de categorias</li>
-<li>
-deve ser possível finalizar o pedido (um botão que limpa a tela e mostra uma mensagem de pedido enviado com sucesso)
-</li>
-
+    <li>ao acessar a aplicação deve mostrar a lista de categorias</li>
+    <li>ao acessar a categoria deve mostrar a lista de produtos</li>
+    <li>o valor do produto deve estar formatado com duas casas após a vírgula</li>
+    <li>deve ser possível adicionar produtos à um pedido</li>
+    <li>
+    esse pedido pode ser um modal ou tela mostrando o que o usuário escolheu, a quantidade e o valor total daquele produto
+    </li>
+    <li>o pedido deve mostrar também o valor total do pedido</li>
+    <li>deve ser possível alterar as quantidades no pedido</li>
+    <li>deve ser possível remover um item do pedido</li>
+    <li>deve ser possível navegar de volta para a tela de categorias</li>
+    <li>
+    deve ser possível finalizar o pedido (um botão que limpa a tela e mostra uma mensagem de pedido enviado com sucesso)
+    </li>
 </ul>
-
-  
 
 Para listar as categorias e buscar os produtos, utilize os 2 webservices (REST) abaixo:
 
 ### Listagem de categorias
+
 Segue abaixo as informações da rota de categorias.
 
 <table>
@@ -96,7 +72,8 @@ Segue abaixo as informações da rota de categorias.
 </table>
 
 ### Listagem de produtos por categoria
-Segue abaixo as informações da rota de produtos
+
+Segue abaixo as informações da rota de produtos.
 <table>
     <tr>
         <th>
@@ -120,12 +97,12 @@ Segue abaixo as informações da rota de produtos
             /api/api/products
         </td>
         <td>
-            category (inteiro) <br>
+            Tipo: category (inteiro) <br><br>
             <b>Exemplo:</b><br><br>
-            <code>{<br>  "category": 1,<br>}</code>
+            <code>json {<br>  "category": 1<br>}</code>
         </td>
         <td>
-            <code>
+            <code>json 
                 {
                   <br>  
                        "id": 1,
@@ -144,17 +121,12 @@ Segue abaixo as informações da rota de produtos
     </tr>
 </table>
 
-# Diferenciais
-
-  
+### Diferenciais
 
 <ul>
-
-<li>Design</li>
-
-<li>Responsividade</li>
-
-<li>Disponibilizar a solução na nuvem</li>
+    <li>Design</li>
+    <li>Responsividade</li>
+    <li>Disponibilizar a solução na nuvem</li>
 
 </ul>
 
@@ -173,17 +145,6 @@ $ cd test-dev
 $ npm install
 ```
 
-## Comandos para auxiliar na execução do projeto
-**Iniciar aplicação**
-
-```
-$ ng serve
-```
-**Iniciar aplicação**
-
-```
-$ ng serve
-```
 ## Observações sobre o App
 
 ## Demonstração
