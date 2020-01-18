@@ -160,7 +160,7 @@ E se você tiver alguma dúvida sobre o projeto...
 
 Email: mantunesribeiro38@gmail.com
 
-[Meu Linkedin](https://www.linkedin.com/in/mateus-antunes-ribeiro-716b50166m)
+[Meu Linkedin](https://www.linkedin.com/in/mateus-antunes-ribeiro-716b50166/)
 
 Obrigado! :v:	
 
