@@ -58,15 +58,9 @@ Segue abaixo as informações da rota de categorias.
         <td>
         </td>
         <td>
-            <code>
-                {
-                  <br>  
-                       "id": 1,
-                  <br>  
-                       nome": "Hambúrguer"
-                  <br>
-                }
-            </code>
+            <pre>
+                { "id": 1,  nome": "Hambúrguer" }
+            </pre>
         </td>
     </tr>
 </table>
@@ -97,23 +91,19 @@ Segue abaixo as informações da rota de produtos.
             /api/api/products
         </td>
         <td>
-            Tipo: category (inteiro) <br><br>
-            <b>Exemplo:</b><br><br>
             <pre>
-                <code>{<br>  "category": 1<br>}</code>
+                { "category": 1 }
             </pre>
         </td>
         <td>
            <pre>
-                <code> 
-                {
+               {
                     "id": 1,
                     nome": "Hambúrguer",
                     "descricao": "Pão, hambúrguer 90g",
                     "preco": 8.5,
                     "categoria_id": 1
                 }
-            </code>
            </pre>
         </td>
     </tr>
@@ -133,19 +123,38 @@ Segue abaixo as informações da rota de produtos.
 **Clone o repositório**
 
 ```
-$ git clone https://github.com/mantunesribeiro38/test-dev.git
+git clone https://github.com/mantunesribeiro38/test-dev.git
 
-$ cd test-dev
+cd test-dev
 ```
-**Instalando dependencias**
+**Instalando dependências**
 
 ```
-$ npm install
+npm install
+
 ```
 
-## Observações sobre o App
+## Comandos úteis
+
+**Inicializar o JSON Server**
+
+```
+json-server db.json
+```
+
+**Executar aplicação**
+
+```
+ng serve
+```
+
+## Observações
+
+A API utilizada no teste  é exclusiva para aplicação do desafio, logo deve ser descontinuada em breve. Por causa disso a aplicação está configurada com  o JSON Server para simular a API Fake. 
 
 ## Demonstração
+
+![](https://github.com/mantunesribeiro38/test-dev/blob/master/my-food.png/gif-my-food.gif)
 
 ##  Contribuição
 
@@ -155,7 +164,7 @@ E se você tiver alguma dúvida sobre o projeto...
 
 Email: mantunesribeiro38@gmail.com
 
-Meu  [LinkedIn]([https://www.linkedin.com/in/mateus-antunes-ribeiro-716b50166/])
+[Meu Linkedin](https://www.linkedin.com/in/mateus-antunes-ribeiro-716b50166m)
 
-Obrigado!
+Obrigado! :smile: :v:	
 

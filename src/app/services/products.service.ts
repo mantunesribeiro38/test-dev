@@ -13,10 +13,21 @@ export class ProductsService {
   constructor(
     private http: HttpClient
   ) { }
-
+  
+  //Código configurado para utilização do json Server
   getProductsByCategory(id) {
       return this.http.get(`${this.API_URL}products?categoria_id=${id}`).pipe(
+        tap()
+      );
+  }
+
+
+  /*
+    # Trecho do código enviado para o teste
+     getProductsByCategory(id) {
+      return this.http.post(`${this.API_URL}products/`, { category: id}).pipe(
         tap(console.log)
       );
   }
+  */
 }

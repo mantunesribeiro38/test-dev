@@ -34,10 +34,21 @@
     margin-bottom: .25rem;
   }
 
-  .head-slogan {
-      color: $primary-color;
-  }
+  .wrapper-head {
+    color: $color-white;
+    background: #AC2135;
+    opacity: 0.9;
 
+    .head-slogan {
+      color: $color-yellow;
+    }
+
+    .lead {
+      color: $color-white!important;
+    }
+    
+  }
+  
   .background-head {
     background: $primary-color !important;
   }
@@ -45,5 +56,11 @@
   
 .text-logo {
     font-weight: 600;
+}
+
+.jumbotron{
+  background: url("../assets/background-image.png") no-repeat center center; 
+  background-size: cover;
+height: 100%;
 }
 
