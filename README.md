@@ -88,7 +88,7 @@ Segue abaixo as informações da rota de produtos.
             POST
         </td>
         <td>
-            /api/api/products
+            /api/products
         </td>
         <td>
             <pre>
@@ -148,13 +148,9 @@ json-server db.json
 ng serve
 ```
 
-## Observações
+## Observação
 
 A API utilizada no teste  é exclusiva para aplicação do desafio, logo deve ser descontinuada em breve. Por causa disso a aplicação está configurada com  o JSON Server para simular a API Fake. 
-
-## Demonstração
-
-![](https://github.com/mantunesribeiro38/test-dev/blob/master/my-food.png/gif-my-food.gif)
 
 ##  Contribuição
 
@@ -166,5 +162,5 @@ Email: mantunesribeiro38@gmail.com
 
 [Meu Linkedin](https://www.linkedin.com/in/mateus-antunes-ribeiro-716b50166m)
 
-Obrigado! :smile: :v:	
+Obrigado! :v:	
 
