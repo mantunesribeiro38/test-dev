@@ -99,24 +99,22 @@ Segue abaixo as informações da rota de produtos.
         <td>
             Tipo: category (inteiro) <br><br>
             <b>Exemplo:</b><br><br>
-            <code>json {<br>  "category": 1<br>}</code>
+            <pre>
+                <code>{<br>  "category": 1<br>}</code>
+            </pre>
         </td>
         <td>
-            <code>json 
+           <pre>
+                <code> 
                 {
-                  <br>  
-                       "id": 1,
-                  <br>  
-                       nome": "Hambúrguer",
-                  <br>
-                       "descricao": "Pão, hambúrguer 90g",
-                  <br>
-                       "preco": 8.5,
-                  <br>
-                       "categoria_id": 1
-                  <br>
+                    "id": 1,
+                    nome": "Hambúrguer",
+                    "descricao": "Pão, hambúrguer 90g",
+                    "preco": 8.5,
+                    "categoria_id": 1
                 }
             </code>
+           </pre>
         </td>
     </tr>
 </table>
