@@ -1,7 +1,7 @@
 import { environment } from '../../environments/environment';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { tap, delay } from 'rxjs/operators';
+import { tap, take } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root',
@@ -17,7 +17,8 @@ export class ProductsService {
   //Código configurado para utilização do json Server
   getProductsByCategory(id) {
       return this.http.get(`${this.API_URL}products?categoria_id=${id}`).pipe(
-        tap()
+        tap(console.log),
+        take(1)
       );
   }
 

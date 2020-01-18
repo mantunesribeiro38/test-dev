@@ -150,7 +150,7 @@ ng serve
 
 ## Observação
 
-A API utilizada no teste  é exclusiva para aplicação do desafio, logo deve ser descontinuada em breve. Por causa disso a aplicação está configurada com  o JSON Server para simular a API Fake. 
+A API utilizada no teste  é exclusiva para aplicação do desafio, logo deve ser descontinuada. Por causa disso a aplicação está configurada com  o JSON Server para simular a API Fake. 
 
 ##  Contribuição
 
